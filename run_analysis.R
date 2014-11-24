@@ -1,7 +1,6 @@
 library(reshape2)
 
 #merge training and test sets
-
 subjects_train <- read.table("subject_train.txt")
 subjects_test <- read.table("subject_test.txt")
 X_train <- read.table("X_train.txt")
@@ -27,7 +26,6 @@ musd <- grepl("mean\\(\\)", names(combined)) | grepl("std\\(\\)", names(combined
 
 # remove others
 combined <- combined[, musd]
-
 
 # factorize activity
 labs = c("Walking", "Walking Upstairs", "Walking Downstairs", "Sitting", "Standing", "Laying")
